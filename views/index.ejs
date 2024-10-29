@@ -2,79 +2,75 @@
 
 <h1>Welcome to the Nguyen Weekly Meal Planner</h1>
 
-<h2>Monday</h2>
-<% if(locals.content) { %>
-    <h4> <%= content.strMeal %></h4>
-    <p> <%= content.strCategory %></p>
-    <p> <%= content.strInstructions %></p>
-<% } else { %>
-    <h4> Choose your protein </h4>
-    <form action="/submit" method="post">
-        <select name="mainIngredient" id="mainIngredient">
-            <option value="chicken">Chicken</option>
-            <option value="beef">Beef</option>
-            <option value="pork">Pork</option>
-            <option value="seafood">Seafood</option>
-        </select>
-        <input type="submit" value="Generate">
-    </form>
+<h4> Choose your proteins </h4>
+<form action="/submit" method="post">
+    <label for="monday">Monday</label>
+    <select name="mondayIngredient" id="mondayIngredient">
+        <option value="chicken">Chicken</option>
+        <option value="beef">Beef</option>
+        <option value="pork">Pork</option>
+        <option value="seafood">Seafood</option>
+    </select><br>
+    <label for="tuesday">Tuesday</label>
+    <select name="tuesdayIngredient" id="tuesdayIngredient">
+        <option value="chicken">Chicken</option>
+        <option value="beef">Beef</option>
+        <option value="pork">Pork</option>
+        <option value="seafood">Seafood</option>
+    </select><br>
+    <label for="wednesday">Wednesday</label>
+    <select name="wednesdayIngredient" id="wednesdayIngredient">
+        <option value="chicken">Chicken</option>
+        <option value="beef">Beef</option>
+        <option value="pork">Pork</option>
+        <option value="seafood">Seafood</option>
+    </select><br>
+    <label for="thursday">Thursday</label>
+    <select name="thursdayIngredient" id="thursdayIngredient">
+        <option value="chicken">Chicken</option>
+        <option value="beef">Beef</option>
+        <option value="pork">Pork</option>
+        <option value="seafood">Seafood</option>
+    </select><br>
+    <input type="submit" value="Generate">
+</form>
 
+<h2>Monday</h2>
+<% if(locals.mondayContent) { %>
+    <h4> <%= mondayContent.strMeal %></h4>
+    <p> <%= mondayContent.strCategory %></p>
+    <p> <%= mondayContent.strInstructions %></p>
+<% } else { %>
+    <h3>No meals yet</h3>
 <% } %>
 
 <h2>Tuesday</h2>
-<% if(locals.content) { %>
-    <h4> <%= content.strMeal %></h4>
-    <p> <%= content.strCategory %></p>
-    <p> <%= content.strInstructions %></p>
+<% if(locals.tuesdayContent) { %>
+    <h4> <%= tuesdayContent.strMeal %></h4>
+    <p> <%= tuesdayContent.strCategory %></p>
+    <p> <%= tuesdayContent.strInstructions %></p>
 <% } else { %>
-    <h4> Choose your protein </h4>
-    <form action="/submit" method="post">
-        <select name="mainIngredient" id="mainIngredient">
-            <option value="chicken">Chicken</option>
-            <option value="beef">Beef</option>
-            <option value="pork">Pork</option>
-            <option value="seafood">Seafood</option>
-        </select>
-        <input type="submit" value="Generate">
-    </form>
+    <h3>No meals yet</h3>
 
 <% } %>
 
 <h2>Wednesday</h2>
-<% if(locals.content) { %>
-    <h4> <%= content.strMeal %></h4>
-    <p> <%= content.strCategory %></p>
-    <p> <%= content.strInstructions %></p>
+<% if(locals.wednesdayContent) { %>
+    <h4> <%= wednesdayContent.strMeal %></h4>
+    <p> <%= wednesdayContent.strCategory %></p>
+    <p> <%= wednesdayContent.strInstructions %></p>
 <% } else { %>
-    <h4> Choose your protein </h4>
-    <form action="/submit" method="post">
-        <select name="mainIngredient" id="mainIngredient">
-            <option value="chicken">Chicken</option>
-            <option value="beef">Beef</option>
-            <option value="pork">Pork</option>
-            <option value="seafood">Seafood</option>
-        </select>
-        <input type="submit" value="Generate">
-    </form>
+    <h3>No meals yet</h3>
 
 <% } %>
 
 <h2>Thursday</h2>
-<% if(locals.content) { %>
-    <h4> <%= content.strMeal %></h4>
-    <p> <%= content.strCategory %></p>
-    <p> <%= content.strInstructions %></p>
+<% if(locals.thursdayContent) { %>
+    <h4> <%= thursdayContent.strMeal %></h4>
+    <p> <%= thursdayContent.strCategory %></p>
+    <p> <%= thursdayContent.strInstructions %></p>
 <% } else { %>
-    <h4> Choose your protein </h4>
-    <form action="/submit" method="post">
-        <select name="mainIngredient" id="mainIngredient">
-            <option value="chicken">Chicken</option>
-            <option value="beef">Beef</option>
-            <option value="pork">Pork</option>
-            <option value="seafood">Seafood</option>
-        </select>
-        <input type="submit" value="Generate">
-    </form>
+    <h3>No meals yet</h3>
 
 <% } %>
 
@@ -84,16 +80,9 @@
     <p> <%= content.strCategory %></p>
     <p> <%= content.strInstructions %></p>
 <% } else { %>
-    <h4> Choose your protein </h4>
-    <form action="/submit" method="post">
-        <select name="mainIngredient" id="mainIngredient">
-            <option value="chicken">Chicken</option>
-            <option value="beef">Beef</option>
-            <option value="pork">Pork</option>
-            <option value="seafood">Seafood</option>
-        </select>
-        <input type="submit" value="Generate">
-    </form>
+    <h3>No meals yet</h3>
 
 <% } %>
+
+
 
