@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -123,118 +121,13 @@
                 </div>
             </div>
             <div class="col py-3">
-                <h1>Welcome to the Nguyen Weekly Meal Planner</h1>
-
-<div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            <h4> Choose your proteins </h4>
-        </div>
-        <div class="col-sm-8">
-            <form action="/submit" method="post">
-                <label for="monday">Monday</label>
-                <select name="mondayIngredient" id="mondayIngredient">
-                    <option value="chicken">Chicken</option>
-                    <option value="beef">Beef</option>
-                    <option value="pork">Pork</option>
-                    <option value="seafood">Seafood</option>
-                </select><br>
-                <label for="tuesday">Tuesday</label>
-                <select name="tuesdayIngredient" id="tuesdayIngredient">
-                    <option value="chicken">Chicken</option>
-                    <option value="beef">Beef</option>
-                    <option value="pork">Pork</option>
-                    <option value="seafood">Seafood</option>
-                </select><br>
-                <label for="wednesday">Wednesday</label>
-                <select name="wednesdayIngredient" id="wednesdayIngredient">
-                    <option value="chicken">Chicken</option>
-                    <option value="beef">Beef</option>
-                    <option value="pork">Pork</option>
-                    <option value="seafood">Seafood</option>
-                </select><br>
-                <label for="thursday">Thursday</label>
-                <select name="thursdayIngredient" id="thursdayIngredient">
-                    <option value="chicken">Chicken</option>
-                    <option value="beef">Beef</option>
-                    <option value="pork">Pork</option>
-                    <option value="seafood">Seafood</option>
-                </select><br>
-                <input type="submit" value="Generate">
-            </form>
-        </div>
-        
-    </div>
-
-    
-    <h2>Monday</h2>
-    
-    <% if(locals.mondayContent) { %>
-        <div id="image-container">
-            <img src="/monday-image" alt="">
-        </div>
-        <h4> <%= mondayContent.strMeal %></h4>
-        <p> <%= mondayContent.strCategory %></p>
-        <p> <% mondayContent.strInstructions %></p>
-    <% } else { %>
-        <h3>No meals yet</h3>
-    <% } %>
-    
-    <h2>Tuesday</h2>
-    <div id="image-container">
-        <img src="/tuesday-image" alt="">
-    </div>
-    <% if(locals.tuesdayContent) { %>
-        <h4> <%= tuesdayContent.strMeal %></h4>
-        <p> <%= tuesdayContent.strCategory %></p>
-        <p> <%= tuesdayContent.strInstructions %></p>
-    <% } else { %>
-        <h3>No meals yet</h3>
-    
-    <% } %>
-    
-    <h2>Wednesday</h2>
-    <div id="image-container">
-        <img src="/wednesday-image" alt="">
-    </div>
-    <% if(locals.wednesdayContent) { %>
-        <h4> <%= wednesdayContent.strMeal %></h4>
-        <p> <%= wednesdayContent.strCategory %></p>
-        <p> <%= wednesdayContent.strInstructions %></p>
-    <% } else { %>
-        <h3>No meals yet</h3>
-    
-    <% } %>
-    
-    <h2>Thursday</h2>
-    <div id="image-container">
-        <img src="/thursday-image" alt="">
-    </div>
-    <% if(locals.thursdayContent) { %>
-        <h4> <%= thursdayContent.strMeal %></h4>
-        <p> <%= thursdayContent.strCategory %></p>
-        <p> <%= thursdayContent.strInstructions %></p>
-    <% } else { %>
-        <h3>No meals yet</h3>
-    
-    <% } %>
-    
-    <h2>Friday</h2>
-    <% if(locals.content) { %>
-        <h4> <%= content.strMeal %></h4>
-        <p> <%= content.strCategory %></p>
-        <p> <%= content.strInstructions %></p>
-    <% } else { %>
-        <h3>No meals yet</h3>
-    
-    <% } %>
-</div>
+                <h3>Left Sidebar with Submenus</h3>
+                <p class="lead"> An example 2-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time. While the sidebar itself is not toggle-able, it does responsively shrink in width on smaller screens.</p>
+                <ul class="list-unstyled">
+                    <li>
+                        <h5>Responsive</h5> shrinks in width, hides text labels and collapses to icons only on mobile
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-
-
-
-
-
-
