@@ -36,15 +36,22 @@
 </form>
 
 <h2>Monday</h2>
+
 <% if(locals.mondayContent) { %>
+    <div id="image-container">
+        <img src="/monday-image" alt="">
+    </div>
     <h4> <%= mondayContent.strMeal %></h4>
     <p> <%= mondayContent.strCategory %></p>
-    <p> <%= mondayContent.strInstructions %></p>
+    <p> <%= mondayContent.strInstructions.slice(1,-1) %></p>
 <% } else { %>
     <h3>No meals yet</h3>
 <% } %>
 
 <h2>Tuesday</h2>
+<div id="image-container">
+    <img src="/tuesday-image" alt="">
+</div>
 <% if(locals.tuesdayContent) { %>
     <h4> <%= tuesdayContent.strMeal %></h4>
     <p> <%= tuesdayContent.strCategory %></p>
@@ -55,6 +62,9 @@
 <% } %>
 
 <h2>Wednesday</h2>
+<div id="image-container">
+    <img src="/wednesday-image" alt="">
+</div>
 <% if(locals.wednesdayContent) { %>
     <h4> <%= wednesdayContent.strMeal %></h4>
     <p> <%= wednesdayContent.strCategory %></p>
@@ -65,6 +75,9 @@
 <% } %>
 
 <h2>Thursday</h2>
+<div id="image-container">
+    <img src="/thursday-image" alt="">
+</div>
 <% if(locals.thursdayContent) { %>
     <h4> <%= thursdayContent.strMeal %></h4>
     <p> <%= thursdayContent.strCategory %></p>

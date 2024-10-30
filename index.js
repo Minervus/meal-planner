@@ -119,14 +119,65 @@ app.post("/submit", async (req, res) => {
             await delay(1000);
         }
 
+        // get image preview for meals
+        //const image = await axios.get(recipeContent.meal0.strMealThumb + '/preview');
+        app.get('/monday-image', async (req, res) => {
+            const apiImageUrl = recipeContent.meal0.strMealThumb + '/preview';
+            const response = await axios({
+              url: apiImageUrl,
+              method: 'GET',
+              responseType: 'stream'
+            });
+          
+            response.data.pipe(res);
+          });
+          await delay(500);
+
+          app.get('/tuesday-image', async (req, res) => {
+            const apiImageUrl = recipeContent.meal1.strMealThumb + '/preview';
+            const response = await axios({
+              url: apiImageUrl,
+              method: 'GET',
+              responseType: 'stream'
+            });
+          
+            response.data.pipe(res);
+          });
+          await delay(500);
+
+          app.get('/wednesday-image', async (req, res) => {
+            const apiImageUrl = recipeContent.meal2.strMealThumb + '/preview';
+            const response = await axios({
+              url: apiImageUrl,
+              method: 'GET',
+              responseType: 'stream'
+            });
+          
+            response.data.pipe(res);
+          });
+          await delay(500);
+
+          app.get('/thursday-image', async (req, res) => {
+            const apiImageUrl = recipeContent.meal3.strMealThumb + '/preview';
+            const response = await axios({
+              url: apiImageUrl,
+              method: 'GET',
+              responseType: 'stream'
+            });
+          
+            response.data.pipe(res);
+          });
+
         console.log(`RecipeContent Object: ${JSON.stringify(recipeContent)}`);
         console.log('Data being sent to EJS:', {
+            
             mondayContent: recipeContent.meal0,
             tuesdayContent: recipeContent.meal1,
             wednesdayContent: recipeContent.meal2,
             thursdayContent: recipeContent.meal3
           });
         res.render("index.ejs", {
+            //image : image,
             mondayContent: recipeContent.meal0,
             tuesdayContent: recipeContent.meal1,
             wednesdayContent: recipeContent.meal2,
